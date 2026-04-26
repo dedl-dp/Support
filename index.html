@@ -408,7 +408,7 @@
             </div>
             <div class="sum-text">
               <h3>البريد الإلكتروني</h3>
-              <span>متاح صباحًا ومساءًا</span>
+              <span>متاح في الفترة الصباحية</span>
             </div>
           </div>
           <div class="toggle-icon">
@@ -434,20 +434,8 @@
             <div class="group-label">أوقات المعالجة</div>
             <div class="row-card">
               <div class="row-info">
-                <strong>الفترة الصباحية</strong>
+                <strong>الأحد - الخميس</strong>
                 <span class="ar-txt">8:00 ص – 2:30 م</span>
-              </div>
-            </div>
-            <div class="row-card">
-              <div class="row-info">
-                <strong>المسائية (الأحد - الأربعاء)</strong>
-                <span class="ar-txt">4:00 م – 7:00 م</span>
-              </div>
-            </div>
-             <div class="row-card">
-              <div class="row-info">
-                <strong>الخميس</strong>
-                <span class="ar-txt">4:00 م – 6:00 م</span>
               </div>
             </div>
           </div>
@@ -464,7 +452,7 @@
             </div>
             <div class="sum-text">
               <h3>نظام التذاكر (TechCare)</h3>
-              <span>متاح صباحًا ومساءًا</span>
+              <span>متاح في الفترة الصباحية</span>
             </div>
           </div>
           <div class="toggle-icon">
@@ -489,20 +477,8 @@
             <div class="group-label">أوقات المعالجة</div>
             <div class="row-card">
               <div class="row-info">
-                <strong>الفترة الصباحية</strong>
+                <strong>الأحد - الخميس</strong>
                 <span class="ar-txt">8:00 ص – 2:30 م</span>
-              </div>
-            </div>
-            <div class="row-card">
-              <div class="row-info">
-                <strong>المسائية (الأحد - الأربعاء)</strong>
-                <span class="ar-txt">4:00 م – 7:00 م</span>
-              </div>
-            </div>
-             <div class="row-card">
-              <div class="row-info">
-                <strong>الخميس</strong>
-                <span class="ar-txt">4:00 م – 6:00 م</span>
               </div>
             </div>
           </div>
@@ -524,52 +500,6 @@
         </div>
       </details>
 
-      <!-- 4. Teams -->
-      <details class="channel" id="teamsDetails">
-        <summary>
-          <div class="sum-content">
-            <div class="icon-box" style="background:rgba(98, 100, 167, 0.15); color:#6264a7;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <div class="sum-text">
-              <h3>الدعم المباشر (Teams)</h3>
-              <span>الفترة المسائية</span>
-            </div>
-          </div>
-          <div class="toggle-icon">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </div>
-        </summary>
-        <div class="details-body">
-          <div class="info-group">
-            <div class="group-label">الرابط</div>
-            <div class="row-card">
-              <div class="row-info">
-                <strong>رابط الاجتماع</strong>
-                <span id="teamsUrlText" style="font-size:12px; word-break:break-all;">سيتم التحديث قريباً</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="info-group">
-            <div class="group-label">أوقات الخدمة</div>
-            <div class="row-card">
-              <div class="row-info">
-                <strong>يومي الإثنين والأربعاء</strong>
-                <span class="ar-txt">5:00 م – 7:00 م</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Alert Box -->
-          <div id="teamsAlert" class="alert-box">
-             <span>لم يتم إضافة الرابط بعد</span>
-          </div>
-
-          <a href="#" id="teamsBtn" target="_blank" class="btn-action" style="background:#6264a7; display:none;">الدخول للاجتماع</a>
-        </div>
-      </details>
-
     </div> <!-- End Channels -->
 
     <footer>
@@ -582,24 +512,6 @@
   <div id="toast" class="toast">تم النسخ بنجاح</div>
 
   <script>
-    // --- Configuration ---
-    // ضع رابط التيمز هنا عند توفره
-    const TEAMS_LINK = ""; 
-
-    // --- Teams Logic ---
-    const teamsBtn = document.getElementById('teamsBtn');
-    const teamsAlert = document.getElementById('teamsAlert');
-    const teamsText = document.getElementById('teamsUrlText');
-
-    if (TEAMS_LINK && TEAMS_LINK.length > 5) {
-      teamsBtn.href = TEAMS_LINK;
-      teamsBtn.style.display = 'flex';
-      teamsAlert.style.display = 'none';
-      teamsText.innerHTML = '<a href="'+TEAMS_LINK+'" target="_blank" style="color:var(--primary); text-decoration:underline;">اضغط هنا للوصول للرابط</a>';
-    } else {
-      teamsText.textContent = "الرابط غير متوفر حالياً";
-    }
-
     // --- Copy Functionality ---
     const toast = document.getElementById('toast');
     let toastTimer;
